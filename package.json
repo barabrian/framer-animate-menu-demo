@@ -15,7 +15,8 @@
     "icons": "npx @svgr/cli --title-prop --icon --typescript -d ./src/icons/components ./src/icons/svg && npx prettier --write ./src/icons/components",
     "cy:run": "cypress run --browser chrome --headless",
     "cmp": "npx hygen cmp new",
-    "slice": "npx hygen slice new"
+    "slice": "npx hygen slice new",
+    "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -26,6 +27,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.17.4",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -47,6 +50,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.3.4",
     "postcss": "^8.4.6",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
@@ -56,5 +61,14 @@
   },
   "resolutions": {
     "webpack": "^5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
   }
 }
