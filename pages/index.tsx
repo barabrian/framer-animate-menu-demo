@@ -9,7 +9,9 @@ const Home: NextPage = () => {
         <meta name="description" content="Next starter" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-rose-800">Next Starter</h1>
+      <h1 className="bg-black text-yellow-50 first-letter:text-3xl">
+        Next Starter
+      </h1>
     </div>
   )
 }

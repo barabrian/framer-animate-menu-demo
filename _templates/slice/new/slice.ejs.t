@@ -1,5 +1,5 @@
 ---
-to: src/Slices/<%=name%>Slice/<%=name%>Slice.tsx
+to: src/slices/<%=name%>Slice/<%=name%>Slice.tsx
 ---
 export interface <%=name%>SliceProps {
   /**

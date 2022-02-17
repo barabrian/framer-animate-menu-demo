@@ -1,6 +1,6 @@
 ---
 inject: true
-to: src/Slices/index.tsx
+to: src/slices/index.tsx
 after: |-
   // hygen: slicemap
 skip_if: <%=name%>Slice {...props}

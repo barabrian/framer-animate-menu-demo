@@ -1,5 +1,5 @@
 ---
-to: src/Slices/index.tsx
+to: src/slices/index.tsx
 inject: true
 after: >-
   // hygen: dynamic

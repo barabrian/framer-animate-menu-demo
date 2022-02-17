@@ -5,23 +5,56 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint src --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 src",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "icons": "npx @svgr/cli --title-prop --icon --typescript -d ./src/icons/components ./src/icons/svg && npx prettier --write ./src/icons/components",
+    "cy:run": "cypress run --browser chrome --headless",
+    "cmp": "npx hygen cmp new",
+    "slice": "npx hygen slice new"
   },
   "dependencies": {
-    "classnames": "^2.3.1",
+    "clsx": "^1.1.1",
     "next": "12.0.10",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "tailwind-merge": "^1.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.4",
+    "@storybook/addon-actions": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.19",
+    "@storybook/addon-interactions": "^6.4.19",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/testing-library": "^0.0.9",
     "@types/node": "17.0.18",
     "@types/react": "17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
     "autoprefixer": "^10.4.2",
+    "babel-loader": "^8.2.3",
     "change-case": "^4.1.2",
-    "eslint": "8.9.0",
-    "eslint-config-next": "12.0.10",
+    "eslint": "^8.9.0",
+    "eslint-config-next": "^12.0.10",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "postcss": "^8.4.6",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.7",
     "tailwindcss": "^3.0.22",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
     "typescript": "4.5.5"
+  },
+  "resolutions": {
+    "webpack": "^5"
   }
 }

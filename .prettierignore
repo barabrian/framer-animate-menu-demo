@@ -18,11 +18,10 @@
 *.pem
 TODO
 
-# debug / logs
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-build-storybook.log*
 
 # local env files
 .env.local
@@ -47,6 +46,3 @@ public/workbox-*.js
 public/workbox-*.js.map
 public/fallback-*.js
 public/fallback-*.js.map
-
-# Sentry
-.sentryclirc
