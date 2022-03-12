@@ -5,7 +5,7 @@ export interface I<%=name%>Props {
   title?: string
 }
 
-export const <%=name%> = ({ title }: <%=name%>Props) => (
+export const <%=name%> = ({ title }: I<%=name%>Props) => (
   <div>{title}</div>
 )
 
