@@ -2,7 +2,7 @@ import { createElement, ElementType, ReactNode } from 'react'
 
 import cn from '@util/cn'
 
-export interface TextProps {
+export interface ITextProps {
   /**
    * Type of element to render.
    */
@@ -15,24 +15,29 @@ export interface TextProps {
   className?: string
 }
 
-const sizes: Record<keyof typeof variants, string> = {
-  hero: 'text-13 md:text-16',
-  h1: 'text-9 md:text-12',
-  h2: 'text-8 md:text-10',
-  h3: 'text-5 md:text-6',
-  p: 'text-3 md:text-4',
-  sm: 'text-2 md:text-3',
+const sizes: Record<keyof typeof variants, string> = /*tw*/ {
+  /**
+   * Define mobile and desktop text sizes
+   */
+  h1: 'text-42/50 md:text-42/50',
+  h2: 'text-20/24 md:text-20/24',
+  h3: 'text-16/19 md:text-16/19',
+  p: ' text-14/14 md:text-14/14',
+  emp: 'text-14/17 md:text-14/17',
+  inp: 'text-20/24 md:text-20/24',
+  btn: 'text-16/19 md:text-16/19',
 }
 
-export type GetTextStylesProps = Pick<TextProps, 'variant'>
+export type GetTextStylesProps = Pick<ITextProps, 'variant'>
 
-const variants = {
-  hero: 'font-serif font-500',
-  h1: 'font-serif font-500',
-  h2: 'font-serif font-500',
-  h3: 'font-serif font-500',
-  p: 'font-sans font-300',
-  sm: 'font-sans font-300',
+const variants = /*tw*/ {
+  h1: 'font-bold',
+  h2: 'font-bold',
+  h3: 'font-bold',
+  p: '',
+  emp: ' underline font-bold',
+  inp: '',
+  btn: 'font-bold',
 }
 
 export const getTextStyles = (
@@ -45,7 +50,7 @@ export const Text = ({
   className,
   variant,
   ...restProps
-}: TextProps) =>
+}: ITextProps) =>
   createElement(as, {
     className: getTextStyles({ variant }, className),
     ...restProps,

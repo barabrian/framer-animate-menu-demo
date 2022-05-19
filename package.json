@@ -15,6 +15,7 @@
     "icons": "npx @svgr/cli --title-prop --icon --typescript -d ./src/icons/components ./src/icons/svg && npx prettier --write ./src/icons/components",
     "cy:run": "cypress run --browser chrome --headless",
     "cmp": "npx hygen cmp new",
+    "sub": "npx hygen cmp sub",
     "slice": "npx hygen slice new",
     "prepare": "husky install"
   },
@@ -46,6 +47,7 @@
     "eslint": "^8.9.0",
     "eslint-config-next": "^12.0.10",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^7.0.0",

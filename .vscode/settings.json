@@ -5,5 +5,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "headwind.runOnSave": false
+  // disable headwind and use prettier to order tailwind classnames
+  "headwind.runOnSave": false,
+  "tailwindCSS.experimental.classRegex": [["/\\*tw\\*/ ([^}]*)}"]]
 }

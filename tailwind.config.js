@@ -1,4 +1,5 @@
 const px2rem = (px) => px / 16 + 'rem'
+const font = (fontSize, lineHeight) => [px2rem(fontSize), lineHeight / fontSize]
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
@@ -6,7 +7,17 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        2: [px2rem(8), 1],
+        /**
+         * Naming convention:
+         * fontSize/lineHeight: font(fontSize, lineHeight)
+         */
+        '42/50': font(42, 50),
+        '40/48': font(40, 48),
+        '30/36': font(30, 36),
+        '20/24': font(20, 24),
+        '16/19': font(16, 19),
+        '14/17': font(14, 17),
+        '14/14': font(14, 14),
       },
     },
   },

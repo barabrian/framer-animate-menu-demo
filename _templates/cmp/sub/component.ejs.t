@@ -1,5 +1,5 @@
 ---
-to: src/components/<%=name%>/<%=name%>.tsx
+to: src/components/<%=component%>/<%=name%>.tsx
 ---
 import { I<%=name%>Props } from './types'
 
