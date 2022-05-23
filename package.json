@@ -16,8 +16,9 @@
     "cy:run": "cypress run --browser chrome --headless",
     "cmp": "npx hygen cmp new",
     "sub": "npx hygen cmp sub",
-    "slice": "npx hygen slice new",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "exp": "node ./expansion.js",
+    "slice": "npx hygen slice new"
   },
   "dependencies": {
     "clsx": "^1.1.1",
@@ -52,6 +53,7 @@
     "eslint-plugin-storybook": "^0.5.12",
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.1",
+    "inquirer": "^8.2.4",
     "lint-staged": "^12.4.1",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
