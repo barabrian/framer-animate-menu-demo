@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin')
 const px2rem = (px) => px / 16 + 'rem'
 const font = (fontSize, lineHeight) => [px2rem(fontSize), lineHeight / fontSize]
 
@@ -21,5 +22,31 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.animation-skeleton': {
+          position: 'relative',
+          overflow: 'hidden',
+        },
+        '.animation-skeleton:before': {
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          transform: 'translateX(-100%)',
+          backgroundImage:
+            'linear-gradient(90deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.2) 20%, rgba(255, 255, 255, 0.5) 60%, rgba(255, 255, 255, 0))',
+          animation: 'skeleton 2.5s infinite',
+          content: '""',
+        },
+        '@keyframes skeleton': {
+          '100%': {
+            transform: 'translateX(100%)',
+          },
+        },
+      })
+    }),
+  ],
 }

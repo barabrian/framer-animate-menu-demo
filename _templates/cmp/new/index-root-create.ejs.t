@@ -2,4 +2,5 @@
 to: src/components/index.ts
 unless_exists: true
 ---
-export { <%= name %> } from './<%= name %>'
+export type { I<%=name%>Props } from './<%=name%>'
+export { <%=name%> } from './<%=name%>'

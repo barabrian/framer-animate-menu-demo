@@ -11,6 +11,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "format": "prettier -w .",
+    "eslint": "eslint",
     "format:check": "prettier -c .",
     "icons": "npx @svgr/cli --title-prop --icon --typescript -d ./src/icons/components ./src/icons/svg && npx prettier --write ./src/icons/components",
     "cy:run": "cypress run --browser chrome --headless",

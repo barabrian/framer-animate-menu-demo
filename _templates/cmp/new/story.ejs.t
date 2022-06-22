@@ -1,12 +1,11 @@
 ---
 to: src/components/<%=name%>/<%=name%>.stories.tsx
 ---
+import { Meta,Story } from '@storybook/react'
 import React from 'react'
 
-import { Story, Meta } from '@storybook/react'
-
+import type { I<%=name%>Props } from './<%=name%>'
 import { <%=name%> } from './<%=name%>'
-import { I<%=name%>Props } from './types'
 
 export default {
   component: <%=name%>,
