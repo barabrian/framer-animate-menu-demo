@@ -24,14 +24,14 @@ inquirer
         'curl -s https://$GITHUB_TOKEN@raw.githubusercontent.com/KosmosOgKaos/starter-expansions/main/CMS/prismic/setup.sh | bash -s',
         (error, stdout, stderr) => {
           if (error) {
-            console.log(`error: ${error.message}`)
+            console.log(`error: \n${error.message}`)
             return
           }
           if (stderr) {
-            console.log(`stderr: ${stderr}`)
+            console.log(`stderr: \n${stderr}`)
             return
           }
-          console.log(`stdout: ${stdout}`)
+          console.log(`stdout: \n${stdout}`)
         },
       )
     }
