@@ -18,7 +18,7 @@
     "cmp": "npx hygen cmp new",
     "sub": "npx hygen cmp sub",
     "prepare": "husky install",
-    "exp": "node ./expansion.js"
+    "exp": "node ./expansion.mjs"
   },
   "dependencies": {
     "clsx": "^1.2.1",

@@ -1,5 +1,5 @@
-const inquirer = require('inquirer')
-const { exec } = require('child_process')
+import { exec } from 'child_process'
+import inquirer from 'inquirer'
 inquirer
   .prompt([
     {
