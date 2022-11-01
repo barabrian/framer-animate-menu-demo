@@ -1,0 +1,1 @@
+export { MenuNoAnimation } from './MenuNoAnimation'

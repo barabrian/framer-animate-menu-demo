@@ -1,2 +1,6 @@
+export type { IMenuProps } from './Menu'
+export { Menu } from './Menu'
+export type { IMenuNoAnimationProps } from './MenuNoAnimation'
+export { MenuNoAnimation } from './MenuNoAnimation'
 export { TailwindScreenDebug } from './TailwindScreenDebug'
 export { Text } from './Text'
